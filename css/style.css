@@ -1,0 +1,376 @@
+:root {
+  --primary: #b6895b;
+  --bg: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Gabarito", sans-serif;
+  background-color: var(--bg);
+  color: #fafafa;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(2, 2, 2, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fafafa;
+  font-style: italic;
+}
+
+span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fafafa;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+  transition: all 0.2s ease;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: all 0.2s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fafafa;
+  margin: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/coffe.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(0deg, #121212 8%, rgba(255, 255, 255, 0) 55%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4.5rem;
+  text-shadow: 10px 10px 10px rgb(2, 2, 2, 0.8);
+  line-height: 1.3;
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-weight: 200;
+  text-shadow: 10px 10px 10px rgb(2, 2, 2, 0.8);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: #fafafa;
+  background-color: var(--primary);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 10px rgb(2, 2, 2, 0.8);
+}
+
+.about,
+.menu,
+.contact {
+  padding: 10rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  font-weight: 300;
+  padding: 0 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.menu h2, .contact h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p, .contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 100%;
+  width: 60%;
+}
+
+.menu .row .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.contact .row {
+    display: flex;
+    background-color: #222222;
+    margin-top: 2rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: .2rem;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem; 
+    text-align: center;
+}
+
+.contact .row form input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    color: #fafafa;
+}
+
+.contact .row form .input-group {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    border: 1px solid var(--primary);
+}
+
+.contact .row form button {
+  margin-top: 3rem;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
+.contact .row form button:hover {
+  background-color: var(--primary);
+  color: #fafafa;
+}
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .credit span {
+  mix-blend-mode: difference;
+}
+
+
+footer .socials a {
+  color: #fafafa;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 100%;
+  border: 1px solid #fafafa;
+  text-align: center;
+  transition: all .2s ease;
+}
+
+footer .socials a:hover {
+  background-color: var(--bg);
+  color: var(--primary);
+  border: 1px solid transparent;
+}
+
+footer .links a {
+  color: #fafafa;
+  padding: 1rem 1rem;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: all .2s ease;
+}
+footer .links a:hover {
+  color: #121212;
+}
+
+footer .credit {
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 63%;
+    overflow-x: hidden;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #513c28;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .navbar-nav a {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .content {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
